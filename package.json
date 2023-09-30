@@ -1,0 +1,32 @@
+{
+  "name": "my-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently --kill-others-on-fail \"npm run serverStart\" \"npm run clientStart\"",
+    "postinstall": "(cd client && npm install) && (cd..) && (cd server && npm install)",
+    "serverStart": "cd server &&  npm start",
+    "clientStart": "cd client && npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.1"
+  },
+  "dependencies": {
+    "@mui/x-date-pickers": "^6.15.0",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "date-fns": "^2.30.0",
+    "dotenv": "^16.3.1",
+    "jsonwebtoken": "^9.0.2",
+    "jwt-decode": "^3.1.2",
+    "mongodb": "^6.0.0",
+    "mongoose": "^7.5.0",
+    "uuid": "^9.0.0"
+  }
+}
