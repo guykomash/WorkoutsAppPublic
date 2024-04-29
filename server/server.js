@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 // a Printing middlware - for debugging.
-app.use(require('./middleware/printRequset'));
+// app.use(require('./middleware/printRequset'));
 
 app.use('/register', require('./routes/registerRoute'));
 app.use('/auth', require('./routes/authRoute'));

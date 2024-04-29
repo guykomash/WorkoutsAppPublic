@@ -1,12 +1,11 @@
 const Workout = require('../models/Workout');
-const User = require('../models/User');
+const User = require('../models/user');
 const Exercise = require('../models/Exercise');
 const { format } = require('date-fns');
 const { ObjectId } = require('mongodb');
 const { formatName } = require('../utils');
 
 const fetchAll = async (req, res) => {
-  console.log('workouts fetchAll');
   const userId = req?.cookies.userId;
   if (!userId)
     return res.status(500).json({ message: 'no userId found in request' });
@@ -20,7 +19,6 @@ const fetchAll = async (req, res) => {
 };
 
 const fetchById = async (req, res) => {
-  console.log('workout fetchById');
   const userId = req?.cookies.userId;
   if (!userId)
     return res.status(500).json({ message: 'no userId found in request' });
@@ -47,7 +45,6 @@ const fetchById = async (req, res) => {
 };
 
 const fetchByUser = async (req, res) => {
-  console.log('workouts fetchByUser');
   const userId = req?.cookies.userId;
   if (!userId)
     return res.status(500).json({ message: 'no userId found in request' });
@@ -71,7 +68,6 @@ const fetchByUser = async (req, res) => {
 };
 
 const fetchByOtherUser = async (req, res) => {
-  console.log('workouts fetchByOtherUser');
   const userId = req?.cookies.userId;
   if (!userId)
     return res.status(500).json({ message: 'no userId found in request' });
@@ -132,7 +128,6 @@ const deleteById = async (req, res) => {
 };
 
 const addWorkout = async (req, res) => {
-  console.log('addWorkout');
   const userId = req?.cookies.userId;
   if (!userId)
     return res.status(500).json({ message: 'no userId found in request' });
@@ -193,7 +188,6 @@ const addWorkout = async (req, res) => {
 };
 
 const updateById = async (req, res) => {
-  console.log('workout updateById');
   const userId = req?.cookies.userId;
   const { workout } = req.body;
   const workoutId = req.params.workoutId;
@@ -256,19 +250,9 @@ const updateById = async (req, res) => {
     console.error(error);
     return res.status(500).send({ message: 'error in update workout' });
   }
-
-  // for re-rendering, return updated Workouts for the user.
-  // const id = foundUser._id;
-  // const Workouts = await Workout.find({ user_id: id }).exec();
-  // if (!Workouts) {
-  //   return res.status(500).json({ message: 'err while workouts fetchAll' });
-  // } else {
-  //   return res.status(200).send({ Workouts }).end();
-  // }
 };
 
 const addSavedWorkout = async (req, res) => {
-  console.log('workouts addSavedWorkout');
   const userId = req?.cookies.userId;
   if (!userId)
     return res.status(500).json({ message: 'no userId found in request' });
@@ -299,7 +283,6 @@ const addSavedWorkout = async (req, res) => {
 };
 
 const deleteSavedWorkout = async (req, res) => {
-  console.log('workouts deleteSavedWorkout');
   const userId = req?.cookies.userId;
   if (!userId)
     return res.status(500).json({ message: 'no userId found in request' });

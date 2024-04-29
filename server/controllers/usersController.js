@@ -1,10 +1,9 @@
-const User = require('../models/User');
+const User = require('../models/user');
 const ROLES_LIST = require('../config/roles_list');
 const Workout = require('../models/Workout');
 const Session = require('../models/Session');
 
 const getAccountDataByUser = async (req, res) => {
-  console.log('getAccountDataByUser');
   const userId = req?.cookies?.userId;
   if (!userId)
     return res.status(500).json({ message: 'no userId found in request' });
@@ -33,7 +32,6 @@ const getAccountDataByUser = async (req, res) => {
 };
 
 const fetchAllUsers = async (req, res) => {
-  console.log('fetchAllUsers');
   const userId = req?.cookies?.userId;
   if (!userId)
     return res.status(500).json({ message: 'no userId found in request' });
@@ -61,8 +59,6 @@ const fetchUserById = async (req, res) => {
 };
 
 const deleteUserById = async (req, res) => {
-  console.log('deleteUserById');
-
   const userId = req?.cookies?.userId;
   if (!userId)
     return res.status(500).json({ message: 'no userId found in request' });
@@ -104,7 +100,6 @@ const deleteUserById = async (req, res) => {
 };
 
 const updateRolesById = async (req, res) => {
-  console.log('updateRolesById');
   const userId = req?.cookies?.userId;
   if (!userId)
     return res.status(500).json({ message: 'no userId found in request' });

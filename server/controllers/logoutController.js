@@ -1,9 +1,7 @@
-const User = require('../models/User');
+const User = require('../models/user');
 
 const handleLogout = async (req, res) => {
   // * delete the accessToken on client-side!
-
-  console.log('handleLogout');
 
   const cookies = req.cookies;
   if (!cookies?.jwt) return res.sendStatus(204); // no cookie to delete , OK.

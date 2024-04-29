@@ -20,7 +20,6 @@ connected: Emitted when Mongoose successfully makes its initial connection to th
 open: Equivalent to connected
 
 */
-
 const mongoose = require('mongoose');
 
 const connectDB = async () => {

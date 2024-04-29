@@ -1,4 +1,4 @@
-const User = require('../models/User');
+const User = require('../models/user');
 
 const jwt = require('jsonwebtoken');
 
@@ -7,7 +7,6 @@ const jwtDecode = require('jwt-decode');
 // grab user from DB by the refreshToken.
 // verify refreshToken => sign new accessToken & send to user.
 const handleRefreshToken = async (req, res) => {
-  console.log('handleRefreshToken');
   const cookies = req.cookies;
   if (!cookies?.jwt) return res.sendStatus(401);
 

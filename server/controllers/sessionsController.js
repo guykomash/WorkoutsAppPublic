@@ -1,13 +1,12 @@
 const Session = require('../models/Session');
 const Workout = require('../models/Workout');
-const User = require('../models/User');
+const User = require('../models/user');
 const Exercise = require('../models/Exercise');
 const { format, formatISO } = require('date-fns');
 const { ObjectId } = require('mongodb');
 const { formatName } = require('../utils');
 
 const fetchAllSessions = async (req, res) => {
-  console.log('fetchAllSessions');
   const userId = req?.cookies.userId;
   if (!userId)
     return res.status(500).json({ message: 'no userId found in request' });
@@ -30,7 +29,6 @@ const fetchAllSessions = async (req, res) => {
 };
 
 const fetchSession = async (req, res) => {
-  console.log('fetchSession');
   const userId = req?.cookies.userId;
   if (!userId)
     return res.status(500).json({ message: 'no userId found in request' });
@@ -42,7 +40,6 @@ const fetchSession = async (req, res) => {
   const sessionId = req?.params?.sessionId;
 
   // request is OK.
-  console.log(sessionId);
 
   try {
     const session = await Session.findById(sessionId).exec();
@@ -69,7 +66,6 @@ const fetchSession = async (req, res) => {
 };
 
 const createNewSession = async (req, res) => {
-  console.log('createNewSession');
   const userId = req?.cookies.userId;
   if (!userId)
     return res.status(500).json({ message: 'no userId found in request' });
@@ -173,10 +169,10 @@ const updateSession = async (req, res) => {
     return res.status(500).json({ message: 'request userId dont exist id DB' });
 
   const { sessionId } = req?.params;
-  console.log(sessionId);
+  // console.log(sessionId);
 
   const { session } = req.body;
-  console.log(session);
+  // console.log(session);
 
   const { user_id, title, date, exercises, note } = session;
 

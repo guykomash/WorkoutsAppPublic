@@ -1,10 +1,9 @@
-const User = require('../models/User');
+const User = require('../models/user');
 const { format } = require('date-fns');
 // hash passwords
 const bcrypt = require('bcrypt');
 
 const handleNewUser = async (req, res) => {
-  console.log('handleNewUser');
   const { user, pwd, firstName, lastName } = req.body;
   console.log(req.body);
   if (!user || !pwd || !firstName || !lastName)

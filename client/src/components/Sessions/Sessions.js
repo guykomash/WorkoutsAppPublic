@@ -92,7 +92,7 @@ const Sessions = () => {
             </Typography>
             <Paper sx={{ padding: 2, overflow: 'auto', maxHeight: '400px' }}>
               <List>
-                {sessions.map((session, index) => {
+                {sessions.toReversed().map((session, index) => {
                   return index >= sessionsInPage ? (
                     <></>
                   ) : (

@@ -1,12 +1,11 @@
 const Exercise = require('../models/Exercise');
 const Workout = require('../models/Workout');
-const User = require('../models/User');
+const User = require('../models/user');
 const { ObjectId } = require('mongodb');
 const { format } = require('date-fns');
 const { formatName } = require('../utils');
 
 const fetchAllExercises = async (req, res) => {
-  console.log('fetchAllExercises');
   const userId = req?.cookies.userId;
   if (!userId)
     return res.status(500).json({ message: 'no userId found in request' });
@@ -20,7 +19,6 @@ const fetchAllExercises = async (req, res) => {
 };
 
 const addExercise = async (req, res) => {
-  console.log('add Exercise');
   const userId = req?.cookies.userId;
   if (!userId)
     return res.status(500).json({ message: 'no userId found in request' });
@@ -53,7 +51,6 @@ const addExercise = async (req, res) => {
 };
 
 const test = async (req, res) => {
-  console.log('test');
   const userId = req?.cookies.userId;
   if (!userId)
     return res.status(500).json({ message: 'no userId found in request' });

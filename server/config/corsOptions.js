@@ -1,4 +1,4 @@
-const { baseURL } = require('../../constants');
+const { baseURL } = require('../constants');
 
 const corsOptions = {
   origin: `${baseURL.client}`,
