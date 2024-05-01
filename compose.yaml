@@ -1,0 +1,37 @@
+services:
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: node-workouts
+    ports:
+      - '3080:3080'
+    env_file: ./server/.env
+    depends_on:
+      - mongo
+    networks:
+      - workouts-app
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: react-workouts
+    ports:
+      - '3000:3000'
+    networks:
+      - workouts-app
+  mongo:
+    container_name: mongo
+    image: mongo:latest
+    ports:
+      - '27017:27017'
+    networks:
+      - workouts-app
+    volumes:
+      - mongo-data:/data/db
+networks:
+  workouts-app:
+    driver: bridge
+volumes:
+  mongo-data:
+    driver: local
