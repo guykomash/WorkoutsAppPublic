@@ -1,0 +1,7 @@
+![workouts1](https://github.com/guykomash/WorkoutsAppPublic/assets/128089503/6f51fa03-5fef-4984-a362-e3e20ad7c78d)
+![workouts2](https://github.com/guykomash/WorkoutsAppPublic/assets/128089503/1c5233e4-8456-4b14-b0bc-1741cd801d75)
+![workouts3](https://github.com/guykomash/WorkoutsAppPublic/assets/128089503/f51c2fe2-a389-4b22-ab06-d66c69bf1830)
+![workouts4](https://github.com/guykomash/WorkoutsAppPublic/assets/128089503/58c57984-f1d8-4362-8cfc-aab1f2a90ea1)
+![workouts5](https://github.com/guykomash/WorkoutsAppPublic/assets/128089503/86e38682-e661-47a3-a767-9ddeb4dd6260)
+![workouts6](https://github.com/guykomash/WorkoutsAppPublic/assets/128089503/2c883b3a-ea4d-4fc5-9680-81aa61913990)
+![workouts7](https://github.com/guykomash/WorkoutsAppPublic/assets/128089503/e2f6abf4-f558-4190-824a-a685c811a2f2)
