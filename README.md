@@ -5,3 +5,4 @@
 ![workouts5](https://github.com/guykomash/WorkoutsAppPublic/assets/128089503/86e38682-e661-47a3-a767-9ddeb4dd6260)
 ![workouts6](https://github.com/guykomash/WorkoutsAppPublic/assets/128089503/2c883b3a-ea4d-4fc5-9680-81aa61913990)
 ![workouts7](https://github.com/guykomash/WorkoutsAppPublic/assets/128089503/e2f6abf4-f558-4190-824a-a685c811a2f2)
+![workouts8](https://github.com/guykomash/WorkoutsAppPublic/assets/128089503/653aa20d-0e5d-41e4-94b7-b0fdca662f8f)
