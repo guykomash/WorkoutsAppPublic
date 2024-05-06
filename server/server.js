@@ -31,6 +31,7 @@ app.use('/workouts', require('./routes/workoutsRoute'));
 app.use('/sessions', require('./routes/sessionsRoute'));
 app.use('/exercises', require('./routes/exercisesRoute'));
 app.use('/admin', require('./routes/adminRoute'));
+app.use('/upload', require('./routes/uploadRoute'));
 
 mongoose.connection.once('open', () => {
   console.log('Connected to MongoDB');
